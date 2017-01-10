@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+}
+
+div {
+    
+    background-color:pink;
+}
+
+
+ul {
+padding-left: 15px;
+list-style-type: none;
+}
+
+li {
+padding: 4px;
+}
+
+
+.container  {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: palevioletred;
+    max-width: 650px;
+    border: 1px black;
+    padding: 5px;
+  
+}
+
+.header{
+max-width: inherit;
+height: 40px;
+margin: 5px;
+vertical-align: middle;
+text-align: center;
+
+}
+
+.picture{
+    max-width: 310px;
+    float: left;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    height: 450px;   
+}
+.summary{
+    margin: 5px;
+    margin-left: 330px;
+    max-width: 320px;
+    height: 450px;   
+
+}
+
+.sub{
+   text-transform: capitalize;
+   font-weight: bolder;
+}
+
+.des{
+font-size: smaller;  
+}
+
+div.content{
+max-width: 650px;
+text-align: left;
+margin: 5px;
+text-indent: 20px;
+vertical-align: -15px;
+max-height: 300px;
+  
+}
+
+div.pic{
+    background-color: transparent;
+    
+}

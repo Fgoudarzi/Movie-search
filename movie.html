@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="scripts/styles.css">
     <script src="scripts/angular.js"></script>
     <script src="scripts/movie.js"></script>
     <style>
+
     </style>
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
+
+
     <div class='container'>
         <div class='header'>
             <p>
+
                 <h2> {{movie.title}}</h2>
+
             </p>
         </div>
         <div class='picture pic'>
+
             <img src='{{movie.poster}}' style='height: 100% '> </img>
+
         </div>
         <div class='summary'>
+
             <ul>
                 <li><span>&nbsp;</span></li>
                 <li ng-show='x !== "plot" && x !=="poster" && x !=="title" && x !=="imdbRating"' ng-repeat="(x,y) in movie "> <span class='sub'>{{x}}:</span> <span class='des'> {{y}} </span></li>
             </ul>
+
         </div>
         <div class='content'>
+ 
             <h2>Plot:</h2>
             <p>
                 {{movie.plot}}
                 </br>
             </p>
+
+
         </div>
+
     </div>
 </body>
 

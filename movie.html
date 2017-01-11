@@ -3,50 +3,42 @@
 
 <head>
 
-    <link rel="stylesheet" type="text/css" href="scripts/styles.css">
+    <!--<link rel="stylesheet" type="text/css" href="scripts/styles.css">-->
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="scripts/angular.js"></script>
     <script src="scripts/movie.js"></script>
-    <style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    </style>
 </head>
 
-<body ng-app="myApp" ng-controller="myCtrl">
-
-
-    <div class='container'>
-        <div class='header'>
-            <p>
-
-                <h2> {{movie.title}}</h2>
-
-            </p>
+<body ng-app="myApp" ng-controller="myCtrl" class="container">
+    <div class="page-header">
+        <h1>{{movie.title}} </h1>
+    </div>
+    <div class="row">
+        <div class="row col-md-4 ">
+            <img class="img-thumbnail" src="{{movie.poster}}"></img>
         </div>
-        <div class='picture pic'>
+        <div class="row col-md-8">
 
-            <img src='{{movie.poster}}' style='height: 100% '> </img>
-
-        </div>
-        <div class='summary'>
-
-            <ul>
-                <li><span>&nbsp;</span></li>
-                <li ng-show='x !== "plot" && x !=="poster" && x !=="title" && x !=="imdbRating"' ng-repeat="(x,y) in movie "> <span class='sub'>{{x}}:</span> <span class='des'> {{y}} </span></li>
+            <ul ng-repeat='(x,y) in movie'>
+                <li ng-show='x !="title" && x !="plot" && x !="poster"'>{{x}}:{{y}}</li>
             </ul>
 
         </div>
-        <div class='content'>
- 
-            <h2>Plot:</h2>
-            <p>
-                {{movie.plot}}
-                </br>
-            </p>
-
-
-        </div>
-
     </div>
+    <div class="page-footer"> this is footer
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $(".page-footer").hide(3000);
+
+        })
+    </script>
 </body>
 
 

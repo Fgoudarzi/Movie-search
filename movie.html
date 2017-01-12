@@ -4,13 +4,13 @@
 <head>
 
     <!--<link rel="stylesheet" type="text/css" href="scripts/styles.css">-->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <link rel="stylesheet"  href="styles/styles.css" type="text/css"/>        
     <script src="scripts/angular.js"></script>
     <script src="scripts/movie.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl" class="container">
@@ -19,25 +19,30 @@
     </div>
     <div class="row">
         <div class="row col-md-4 ">
-            <img class="img-thumbnail" src="{{movie.poster}}"></img>
+            <img class="img-thumbnail" ng-src="{{movie.poster}}"></img>
         </div>
         <div class="row col-md-8">
 
-            <ul ng-repeat='(x,y) in movie'>
-                <li ng-show='x !="title" && x !="plot" && x !="poster"'>{{x}}:{{y}}</li>
+            <ul ng-repeat='(x,y) in movie' style="list-style-type:none ; text-transform: capitalize">
+                <li ng-show='x !="title" && x !="plot" && x !="poster"'>
+                    <strong>{{x}}:</strong>{{y}}
+                </li>
             </ul>
-
         </div>
+        
     </div>
-    <div class="page-footer"> this is footer
-    </div>
-    <script>
-        $(document).ready(function () {
+     <div class="row">
+         <div class="row col-md-4 circle">
+            FAti Gole
+        </div>
+     </div>
 
-            $(".page-footer").hide(4000);
 
-        })
-    </script>
+<footer class="container-fluid">
+    <p>Footer Text</p>
+</footer>
+
+
 </body>
 
 

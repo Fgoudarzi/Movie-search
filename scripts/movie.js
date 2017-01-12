@@ -38,8 +38,10 @@ titanic.imdbRating ="7.7";
 
 
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function ($scope) {
+app.controller('myCtrl', function ($scope ) {
 
   $scope.movie = titanic;
+
 });
+
 

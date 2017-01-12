@@ -5,8 +5,8 @@
 
     <!--<link rel="stylesheet" type="text/css" href="scripts/styles.css">-->
 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
-    <link rel="stylesheet"  href="styles/styles.css" type="text/css"/>        
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css" type="text/css" />
     <script src="scripts/angular.js"></script>
     <script src="scripts/movie.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -18,32 +18,33 @@
         <h1>{{movie.title}} </h1>
     </div>
     <div class="row">
-        <div class="row col-md-4 ">
-            <img class="img-thumbnail" ng-src="{{movie.poster}}"></img>
-        </div>
-        <div class="row col-md-8">
-
+        <div class="col-sm-4">
+            <img ng-src="{{movie.poster}}" class="img-thumbnail" alt="{{movie.title}}"></img>     
+            <div >{{movie.imdbRating}}</div>
+    </div>
+        <div class="col-sm-6">
             <ul ng-repeat='(x,y) in movie' style="list-style-type:none ; text-transform: capitalize">
-                <li ng-show='x !="title" && x !="plot" && x !="poster"'>
+                <li ng-show='x !="title" && x !="plot" && x !="poster" && x != "imdbRating"'>
                     <strong>{{x}}:</strong>{{y}}
                 </li>
             </ul>
         </div>
-        
+     
     </div>
-     <div class="row">
-         <div class="row col-md-4 circle">
-            FAti Gole
+      <div class="row"> <span>&nbsp &nbsp </span>  </div>
+
+    <div class="row">
+        <div class="col-md-12 panel-body">
+            {{movie.plot}}
         </div>
-     </div>
+    </div>
 
 
-<footer class="container-fluid">
-    <p>Footer Text</p>
-</footer>
+    <footer class="container-fluid">
+        <p>Copyright © 1996-2015 Movie Company.</p>
+    </footer>
 
 
 </body>
-
 
 </html>
